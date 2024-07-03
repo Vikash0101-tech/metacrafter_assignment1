@@ -36,22 +36,22 @@ class NFTContract {
 
 OUTPUT
 
-Name: NFT 1
+Name: NFT 1 
 Description: This is the first NFT
 Owner: creator
 Metadata: {"attribute1":"Attribute 1","attribute2":1}
---------------------
+-------------------- 
 Name: NFT 2
-Description: This is the second NFT
+Description: This is the second NFT 
 Owner: creator
 Metadata: {"attribute1":"Attribute 2","attribute2":2}
---------------------
-Name: NFT 3
-Description: This is the third NFT
-Owner: creator
+-------------------
+Name: NFT 3 
+Description: This is the third NFT 
+Owner: creator 
 Metadata: {"attribute1":"Attribute 3","attribute2":3}
 --------------------
-Total supply of NFTs: 3
+
 
 ---------------------------------------------explaining output--------------------------------------
 Name: The name of the NFT.
