@@ -33,15 +33,14 @@ function getTotalSupply() {
 */
  
 
-// Step 1: Create a class to hold your NFTs
+ // Step 1: Create a class to hold your NFTs
 class NFTContract {
     constructor() {
         this.nfts = [];
     }
-    
+
     // An array is the type of variable that has the capacity to store several NFTs. We can maintain track of all minted NFTs in an ordered collection by using an array, which is appropriate because it can store numerous NFT objects.
-  
-  
+
     // Step 2: Function to create a new NFT
     mintNFT(name, description, attribute1, attribute2) {
         const newNFT = {
@@ -55,35 +54,35 @@ class NFTContract {
         };
         this.nfts.push(newNFT);
     }
-  
+
     // Step 3: Function to list all NFTs
     listNFTs() {
         for (let i = 0; i < this.nfts.length; i++) {
             const nft = this.nfts[i];
-            console.log(Name: ${nft.name});
-            console.log(Description: ${nft.description});
-            console.log(Owner: ${nft.owner});
-            console.log(Metadata: ${JSON.stringify(nft.metadata)});
+            console.log(`Name: ${nft.name}`);
+            console.log(`Description: ${nft.description}`);
+            console.log(`Owner: ${nft.owner}`);
+            console.log(`Metadata: ${JSON.stringify(nft.metadata)}`);
             console.log("--------------------");
         }
     }
-  
+
     // Step 4: Function to get the total supply of NFTs
     getTotalSupply() {
         return this.nfts.length;
     }
-  }
-  
-  // Create a new instance of the NFTContract class
-  const nftContract = new NFTContract();
-  
-  // Call the mintNFT function to create some NFTs
-  nftContract.mintNFT("NFT 1", "This is the first NFT", "Attribute 1", 1);
-  nftContract.mintNFT("NFT 2", "This is the second NFT", "Attribute 2", 2);
-  nftContract.mintNFT("NFT 3", "This is the third NFT", "Attribute 3", 3);
-  
-  // Call the listNFTs function to print the metadata of all NFTs
-  nftContract.listNFTs();
-  
-  // Call the getTotalSupply function to print the total number of NFTs
-  console.log(Total supply of NFTs: ${nftContract.getTotalSupply()});
+}
+
+// Create a new instance of the NFTContract class
+const nftContract = new NFTContract();
+
+// Call the mintNFT function to create some NFTs
+nftContract.mintNFT("NFT 1", "This is the first NFT", "Attribute 1", 1);
+nftContract.mintNFT("NFT 2", "This is the second NFT", "Attribute 2", 2);
+nftContract.mintNFT("NFT 3", "This is the third NFT", "Attribute 3", 3);
+
+// Call the listNFTs function to print the metadata of all NFTs
+nftContract.listNFTs();
+
+// Call the getTotalSupply function to print the total number of NFTs
+console.log(`Total supply of NFTs: ${nftContract.getTotalSupply()}`);
